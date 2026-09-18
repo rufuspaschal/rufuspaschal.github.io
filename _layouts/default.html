@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Rufus Paschal</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Rufus Paschal">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/images/rufus-avatar.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Rufus Paschal">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:image" content="{{ '/assets/images/rufus-avatar.jpg' | absolute_url }}">
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rufus Paschal",
+    "url": "https://rufuspaschal.com",
+    "jobTitle": "Security & Public-Safety Professional",
+    "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+    "email": "mailto:iam@rufuspaschal.com",
+    "telephone": "+1-647-563-9108",
+    "description": "Toronto security and public-safety professional and law-enforcement graduate, dedicated to service, protection, and community safety."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  {% include header.html %}
+  <main id="main-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>
