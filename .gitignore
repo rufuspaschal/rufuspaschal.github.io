@@ -1,0 +1,12 @@
+# Never commit secrets or tokens
+*.token
+credentials.token
+
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# OS / editor
+.DS_Store
+Thumbs.db
