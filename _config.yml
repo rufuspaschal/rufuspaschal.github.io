@@ -1,0 +1,6 @@
+title: Rufus Paschal
+description: Toronto security and public-safety professional and law-enforcement graduate. Dedicated to service, protection, and community safety.
+url: "https://rufuspaschal.com"
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
