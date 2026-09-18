@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">Rufus Paschal</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">&#9776;</label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/story/' | relative_url }}" {% if page.url contains 'story' %}class="active"{% endif %}>My Story</a></li>
+        <li><a href="{{ '/experience/' | relative_url }}" {% if page.url contains 'experience' %}class="active"{% endif %}>Experience</a></li>
+        <li><a href="{{ '/community/' | relative_url }}" {% if page.url contains 'community' %}class="active"{% endif %}>Community &amp; Life</a></li>
+        <li><a href="{{ '/employers/' | relative_url }}" {% if page.url contains 'employers' %}class="active"{% endif %}>For Employers</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains 'contact' %}class="active"{% endif %}>Contact</a></li>
+        <li><a class="nav-cta" href="{{ '/assets/resume/Rufus_Paschal_Resume_2026.pdf' | relative_url }}" download>Download Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
