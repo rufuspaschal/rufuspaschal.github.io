@@ -10,6 +10,7 @@
   --line: #e7e3d9;
   --radius: 12px;
   --max-width: 980px;
+  --header-bg: #454a52;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,9 +24,10 @@
     --navy-dark: #1a2b40;
     --gold: #e0b45c;
     --gold-dark: #e0b45c;
+    --header-bg: #22262d;
   }
   .avatar { border-color: #1a2028; }
-  header.site-header { background: linear-gradient(135deg, #12233a, #0b1524); }
+  header.site-header { background: var(--header-bg); }
 }
 
 * { box-sizing: border-box; }
@@ -56,7 +58,7 @@ a:hover { text-decoration: underline; }
 
 /* ---------- Header / nav ---------- */
 header.site-header {
-  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+  background: var(--header-bg);
   color: #fff;
   padding: 1.1rem 1.5rem;
   border-bottom: 3px solid var(--gold);
@@ -72,12 +74,31 @@ header.site-header {
   position: relative;
 }
 .brand {
-  font-size: 1.35rem;
-  font-weight: 700;
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
   color: #fff;
-  letter-spacing: 0.03em;
 }
-.brand:hover { color: var(--gold); text-decoration: none; }
+.brand:hover { text-decoration: none; }
+.brand-script {
+  font-family: "Segoe Script", "Brush Script MT", "Lucida Handwriting", "Snell Roundhand", cursive;
+  font-size: clamp(1.5rem, 6.5vw, 2.05rem);
+  font-weight: 400;
+  color: #f5f2ea;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.brand:hover .brand-script { color: var(--gold); }
+.brand-sub {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #c3c7cf;
+  margin-top: 0.2rem;
+  padding-left: 0.12rem;
+}
 
 nav.main-nav ul {
   list-style: none;
@@ -90,7 +111,7 @@ nav.main-nav ul {
 }
 nav.main-nav a { color: #e8edf3; font-weight: 600; }
 nav.main-nav a:hover,
-nav.main-nav a.active { color: var(--gold); text-decoration: none; }
+nav.main-nav a.active { color: #ecc06b; text-decoration: none; }
 
 .nav-cta {
   background: var(--gold);
