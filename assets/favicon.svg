@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="RP">
+  <rect width="32" height="32" rx="7" fill="#3d424b"/>
+  <rect x="1" y="1" width="30" height="30" rx="6" fill="none" stroke="#c68b2c" stroke-width="1.5"/>
+  <text x="16" y="22" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="15" letter-spacing="0.5" fill="#e0b45c">RP</text>
+</svg>
