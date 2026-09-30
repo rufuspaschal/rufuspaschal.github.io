@@ -269,6 +269,7 @@ blockquote.pull {
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
 .gallery figure { margin: 0; background: var(--card-bg); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.gallery img.focus-top { object-position: center 12%; }
 .gallery figcaption { padding: 0.7rem 0.9rem 0.9rem; color: var(--muted); font-size: 0.9rem; }
 .gallery figcaption strong { color: var(--navy); display: block; margin-bottom: 0.15rem; }
 
